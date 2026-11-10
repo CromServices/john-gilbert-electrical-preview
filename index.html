@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Website preview.">
+<title>John Gilbert Electrical — Home</title>
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("jg-theme");
+      var theme;
+      if (saved === "light" || saved === "dark") {
+        theme = saved;
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        theme = "dark";
+      } else {
+        theme = "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#top">
+      <picture>
+        <source type="image/webp" srcset="assets/logo-400.webp 400w, assets/logo-800.webp 800w" sizes="200px">
+        <img src="assets/logo.png" width="458" height="97" alt="John Gilbert Electrical">
+      </picture>
+    </a>
+    <nav class="primary" aria-label="Site">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#quote">Quote</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-secondary header-call" href="tel:0409067488">Call 0409 067 488</a>
+      <a class="btn btn-primary" href="#quote"><span class="btn-full">Request a quote</span><span class="btn-short">Quote</span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch light/dark">
+        <span class="theme-toggle-face" aria-hidden="true">
+          <svg class="icon-sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="kicker">Master Electrician · Licence 9693</p>
+    <h1>Electrical work for <em>Toowoomba</em> and the surrounding areas.</h1>
+    <p class="lead">John Gilbert Electrical covers all facets of electrical work, including domestic, commercial, industrial, and data and communications.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#quote">Request a quote</a>
+      <a class="btn btn-secondary" href="tel:0409067488">Call 0409 067 488</a>
+    </div>
+    <p class="proof">
+      <span>Licence 9693</span>
+      <span>Master Electrician</span>
+      <span>On call 24 hours, 7 days</span>
+    </p>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <h2>The work we do</h2>
+    <p class="intro">All facets of electrical work in Toowoomba and the surrounding areas — no job too big or too small.</p>
+    <div class="work-list">
+      <article>
+        <p class="num">01</p>
+        <div>
+          <h3>Domestic</h3>
+          <p>Electrical work for homes, including the installation of additional lights, power points, data points and TV antennas.</p>
+        </div>
+      </article>
+      <article>
+        <p class="num">02</p>
+        <div>
+          <h3>Commercial</h3>
+          <p>Commercial electrical work, as part of the service we cover across Toowoomba and the surrounding areas.</p>
+        </div>
+      </article>
+      <article>
+        <p class="num">03</p>
+        <div>
+          <h3>Industrial</h3>
+          <p>Industrial electrical work, for the jobs that need a licensed contractor on site.</p>
+        </div>
+      </article>
+      <article>
+        <p class="num">04</p>
+        <div>
+          <h3>Data and communications</h3>
+          <p>Data and communications work, including telecommunications.</p>
+        </div>
+      </article>
+      <article>
+        <p class="num">05</p>
+        <div>
+          <h3>Household units</h3>
+          <p>Supply and installation of household units.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <p class="kicker">Licensed contractor</p>
+      <h2>A Master Electrician for Toowoomba.</h2>
+      <p>John Gilbert Electrical covers all facets of electrical work, including domestic, commercial, industrial, and data and communications, in Toowoomba and surrounding areas.</p>
+      <p>We are on call 24 hours a day, 7 days a week.</p>
+      <p class="lic">Contractor licence number 9693. Master Electrician member.</p>
+      <p class="mea">
+        <picture>
+          <source type="image/webp" srcset="assets/master-electrician-142.webp 142w, assets/master-electrician-284.webp 284w" sizes="128px">
+          <img src="assets/master-electrician.png" width="128" height="36" alt="Master Electricians Australia">
+        </picture>
+      </p>
+    </div>
+    <figure class="photo-slot">
+      <strong>Your photo here — a recent job</strong>
+    </figure>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap quote-grid">
+    <div>
+      <h2>Request a quote</h2>
+      <p class="help">Tell us a little about the job and we’ll call you back. We’ll confirm the details once we’ve talked it through.</p>
+      <ol class="steps">
+        <li data-n="1">Fill in your name, phone, email, suburb and a short description of the work.</li>
+        <li data-n="2">Hit “Request a quote”.</li>
+        <li data-n="3">We’ll call you back to talk through the job and confirm a time.</li>
+      </ol>
+      <p class="help" style="margin-top:24px">Phone <a href="tel:0409067488">0409 067 488</a><br>Email <a href="mailto:info@johngilbertelectrical.com.au">info@johngilbertelectrical.com.au</a></p>
+    </div>
+    <div>
+      <form action="#" method="post" novalidate data-quote>
+        <label>Name
+          <input type="text" name="name" autocomplete="name">
+          <span class="field-error" hidden></span>
+        </label>
+        <label>Phone
+          <input type="tel" name="phone" autocomplete="tel">
+          <span class="field-error" hidden></span>
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email">
+          <span class="field-error" hidden></span>
+        </label>
+        <label>Suburb or address
+          <input type="text" name="suburb" autocomplete="address-level2">
+          <span class="field-error" hidden></span>
+        </label>
+        <label class="full">Type of work
+          <select name="work">
+            <option>Domestic</option>
+            <option>Commercial</option>
+            <option>Industrial</option>
+            <option>Data and communications</option>
+            <option>Household units</option>
+          </select>
+        </label>
+        <label class="full">A short description
+          <textarea name="details"></textarea>
+          <span class="field-error" hidden></span>
+        </label>
+        <label>Preferred time to talk
+          <select name="when">
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Either</option>
+          </select>
+        </label>
+        <div class="submit"><button class="btn btn-primary" type="submit">Request a quote</button></div>
+      </form>
+      <p class="thanks" hidden tabindex="-1">Thank you. We’ll call you back to talk through the job and confirm a time.</p>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap book-grid">
+    <div>
+      <h2>Book a visit</h2>
+      <p class="help">Pick a day and a time window that suits you. This holds a visit or a call — it is not a confirmed job until we reply.</p>
+      <ol class="steps">
+        <li data-n="1">Choose a day from the row, pick a time window, and leave your name and phone number.</li>
+        <li data-n="2">Hit “Book a visit”.</li>
+        <li data-n="3">We’ll call you to confirm the visit.</li>
+        <li data-n="4">If that time doesn’t work, we’ll call to rearrange.</li>
+      </ol>
+    </div>
+    <div>
+      <form action="#" method="post" novalidate data-book>
+        <label>Name
+          <input type="text" name="name" autocomplete="name">
+          <span class="field-error" hidden></span>
+        </label>
+        <label>Phone
+          <input type="tel" name="phone" autocomplete="tel">
+          <span class="field-error" hidden></span>
+        </label>
+        <div class="book-widget">
+          <p class="widget-label" id="day-label">Preferred day</p>
+          <div data-day-error>
+            <div class="day-chips-wrap">
+              <div class="day-chips" data-days role="radiogroup" aria-labelledby="day-label"></div>
+            </div>
+            <p class="field-error" hidden></p>
+          </div>
+          <p class="widget-label" id="time-label">Time window</p>
+          <div data-time-error>
+            <div class="time-pills" role="radiogroup" aria-labelledby="time-label">
+              <label class="pill"><input type="radio" name="window" value="Morning" checked> Morning</label>
+              <label class="pill"><input type="radio" name="window" value="Midday"> Midday</label>
+              <label class="pill"><input type="radio" name="window" value="Afternoon"> Afternoon</label>
+            </div>
+            <p class="field-error" hidden></p>
+          </div>
+          <p class="widget-label" id="job-label">Type of work</p>
+          <div data-job-error>
+            <div class="job-chips" role="radiogroup" aria-labelledby="job-label">
+              <label class="job-chip"><input type="radio" name="job" value="Domestic"> Domestic</label>
+              <label class="job-chip"><input type="radio" name="job" value="Commercial"> Commercial</label>
+              <label class="job-chip"><input type="radio" name="job" value="Industrial"> Industrial</label>
+              <label class="job-chip"><input type="radio" name="job" value="Data and communications"> Data and communications</label>
+              <label class="job-chip"><input type="radio" name="job" value="Household units"> Household units</label>
+            </div>
+            <p class="field-error" hidden></p>
+          </div>
+        </div>
+        <label class="full">Anything we should know
+          <textarea name="notes"></textarea>
+        </label>
+        <p class="book-summary" data-summary aria-live="polite"></p>
+        <div class="submit"><button class="btn btn-primary" type="submit">Book a visit</button></div>
+      </form>
+      <p class="thanks" hidden tabindex="-1">Thank you. We’ll call you to confirm the visit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <h2>What locals say</h2>
+    <p class="rating">5.0 stars from 7 Google reviews</p>
+    <div class="quotes">
+      <blockquote>
+        <p>So polite and efficient, beautifully respectful of my space and property.</p>
+        <footer>Danielle · 3 years ago</footer>
+      </blockquote>
+      <blockquote>
+        <p>Nothing but good things to say about John and the team.</p>
+        <footer>Dwayne · 4 years ago</footer>
+      </blockquote>
+      <blockquote>
+        <p>Ben and his mate were very friendly and professional and excellent at their job.</p>
+        <footer>David · 4 years ago</footer>
+      </blockquote>
+    </div>
+    <p class="review-note">If we’ve already done a job for you, we’d be glad if you left a Google review. We’ll send a link after the work is finished.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <h3>Call or email</h3>
+        <p><a href="tel:0409067488">0409 067 488</a><br><a href="mailto:info@johngilbertelectrical.com.au">info@johngilbertelectrical.com.au</a></p>
+      </div>
+      <div>
+        <h3>Post</h3>
+        <p>PO BOX 4714<br>East Toowoomba Q 4350</p>
+      </div>
+      <div>
+        <h3>Area</h3>
+        <p>Toowoomba and the surrounding areas</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top">
+        <img src="assets/logo.png" width="458" height="97" alt="John Gilbert Electrical">
+      </a>
+      0409 067 488 · info@johngilbertelectrical.com.au<br>
+      Contractor licence number 9693
+    </div>
+    <div>
+      <nav aria-label="Footer">
+        <a href="services/">Work</a>
+        <a href="about-us/">About</a>
+        <a href="quotes/">Quote</a>
+        <a href="contact-us/">Contact</a>
+      </nav>
+      Electrician, Toowoomba and surrounding areas.<br>© 2026 John Gilbert Electrical
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a class="btn btn-secondary" href="tel:0409067488">Call</a>
+  <a class="btn btn-primary" href="#quote">Quote</a>
+</div>
+<script src="site.js"></script>
+</body>
+</html>

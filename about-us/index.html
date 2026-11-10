@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Website preview.">
+<title>John Gilbert Electrical — About</title>
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("jg-theme");
+      var theme;
+      if (saved === "light" || saved === "dark") {
+        theme = saved;
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        theme = "dark";
+      } else {
+        theme = "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../">
+      <picture>
+        <source type="image/webp" srcset="../assets/logo-400.webp 400w, ../assets/logo-800.webp 800w" sizes="200px">
+        <img src="../assets/logo.png" width="458" height="97" alt="John Gilbert Electrical">
+      </picture>
+    </a>
+    <nav class="primary" aria-label="Site">
+      <a href="../services/">Work</a>
+      <a href="../about-us/" aria-current="page">About</a>
+      <a href="../quotes/">Quote</a>
+      <a href="../quotes/#book">Book</a>
+      <a href="../contact-us/">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-secondary header-call" href="tel:0409067488">Call 0409 067 488</a>
+      <a class="btn btn-primary" href="../quotes/"><span class="btn-full">Request a quote</span><span class="btn-short">Quote</span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch light/dark">
+        <span class="theme-toggle-face" aria-hidden="true">
+          <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero page-hero" id="top">
+  <div class="wrap">
+    <p class="kicker">About us</p>
+    <h1>A family electrical contractor for Toowoomba.</h1>
+    <p class="lead">John Gilbert Electrical was founded by John and Pat Gilbert in 1993 and is a family owned and operated business.</p>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap about-grid">
+    <div>
+      <p class="kicker">Licensed contractor</p>
+      <h2>Master Electrician member.</h2>
+      <p>Prior to commencing this company John and Pat operated as a partnership from 1976 after returning from 5 years working in Papua New Guinea. John started out as an electrical contractor in 1973 and has over 40 years’ experience in the industry working both in Australia and overseas.</p>
+      <p>John’s son Johnnie is also an accomplished electrician with 18 years’ experience and brings to the business a wealth of knowledge. Johnnie worked closely with his father completing his apprenticeship with John Gilbert Electrical before widening his horizons and gaining valuable experience working both in Australia and the United Kingdom (including completing work for the Royal Household).</p>
+      <p>John Gilbert Electrical covers all facets of electrical work, including domestic, commercial, industrial and data and communications, in Toowoomba and surrounding areas.</p>
+      <p class="lic">Contractor licence number 9693. Master Electrician member. Arctick licence 56668.</p>
+      <p class="mea">
+        <picture>
+          <source type="image/webp" srcset="../assets/master-electrician-142.webp 142w, ../assets/master-electrician-284.webp 284w" sizes="128px">
+          <img src="../assets/master-electrician.png" width="128" height="36" alt="Master Electricians Australia">
+        </picture>
+      </p>
+    </div>
+    <figure class="photo-slot">
+      <strong>Your photo here — the team on site</strong>
+    </figure>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="wrap">
+    <h2>Our mission</h2>
+    <p class="help">Our mission is to provide expert, efficient and reliable electrical services to all our valued customers. We strive to deliver only the highest quality workmanship and always conduct ourselves in a fair, honest and ethical manner. Safety is our priority and we will always put the safety of our staff, customers and the community first. We are knowledgeable and innovative and will analyse all options in order to tailor the right solution for each varied electrical situation. We aim to provide exceptional customer service and seek to exceed our client’s expectations.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="../">
+        <img src="../assets/logo.png" width="458" height="97" alt="John Gilbert Electrical">
+      </a>
+      0409 067 488 · info@johngilbertelectrical.com.au<br>
+      Contractor licence number 9693
+    </div>
+    <div>Electrician, Toowoomba and surrounding areas.<br>© 2026 John Gilbert Electrical</div>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a class="btn btn-secondary" href="tel:0409067488">Call</a>
+  <a class="btn btn-primary" href="../quotes/">Quote</a>
+</div>
+<script src="../site.js"></script>
+</body>
+</html>
