@@ -56,8 +56,28 @@
     err.textContent = message || "";
   }
 
+  function radioKeys(form, groupName, onMove) {
+    var inputs = Array.prototype.slice.call(form.querySelectorAll("input[name='" + groupName + "']"));
+    inputs.forEach(function (input) {
+      input.addEventListener("keydown", function (e) {
+        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft" && e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+        e.preventDefault();
+        var enabled = inputs.filter(function (n) { return !n.disabled; });
+        var current = enabled.indexOf(input);
+        if (current < 0) return;
+        var dir = (e.key === "ArrowRight" || e.key === "ArrowDown") ? 1 : -1;
+        var next = enabled[(current + dir + enabled.length) % enabled.length];
+        next.checked = true;
+        next.focus();
+        if (onMove) onMove();
+      });
+    });
+  }
+
   function bindQuoteForm(form) {
     if (!form) return;
+    radioKeys(form, "work");
+    radioKeys(form, "when");
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var name = form.querySelector("[name='name']");
@@ -160,26 +180,9 @@
     form.addEventListener("change", updateSummary);
     updateSummary();
 
-    function radioKeys(groupName) {
-      var inputs = Array.prototype.slice.call(form.querySelectorAll("input[name='" + groupName + "']"));
-      inputs.forEach(function (input, index) {
-        input.addEventListener("keydown", function (e) {
-          if (e.key !== "ArrowRight" && e.key !== "ArrowLeft" && e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
-          e.preventDefault();
-          var enabled = inputs.filter(function (n) { return !n.disabled; });
-          var current = enabled.indexOf(input);
-          if (current < 0) return;
-          var dir = (e.key === "ArrowRight" || e.key === "ArrowDown") ? 1 : -1;
-          var next = enabled[(current + dir + enabled.length) % enabled.length];
-          next.checked = true;
-          next.focus();
-          updateSummary();
-        });
-      });
-    }
-    radioKeys("day");
-    radioKeys("window");
-    radioKeys("job");
+    radioKeys(form, "day", updateSummary);
+    radioKeys(form, "window", updateSummary);
+    radioKeys(form, "job", updateSummary);
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();

@@ -609,7 +609,13 @@ form {
 }
 .book form { background: var(--field-bg); border-color: var(--line); }
 form label { display: flex; flex-direction: column; gap: 6px; font-size: 16px; font-weight: 700; color: var(--ink); }
-form label.full { grid-column: 1 / -1; }
+form .full { grid-column: 1 / -1; }
+form div.full {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
 form input, form select, form textarea {
   min-height: 44px;
   padding: 10px 12px;
@@ -649,9 +655,8 @@ form .submit { grid-column: 1 / -1; justify-self: start; }
 }
 
 .reviews { background: var(--band-bg); color: var(--band-fg); }
-.reviews h2 { color: var(--band-heading); }
+.reviews h2 { color: var(--band-heading); margin-bottom: 28px; }
 .reviews .help { color: var(--band-fg); }
-.rating { font-size: 20px; font-weight: 700; color: var(--band-fg); margin-bottom: 28px; line-height: 1.5; }
 .quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 blockquote {
   border-top: 3px solid var(--taupe);

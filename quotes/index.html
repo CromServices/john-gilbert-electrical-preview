@@ -99,26 +99,28 @@
           <input type="text" name="suburb" autocomplete="address-level2">
           <span class="field-error" hidden></span>
         </label>
-        <label class="full">Type of work
-          <select name="work">
-            <option>Domestic</option>
-            <option>Commercial</option>
-            <option>Industrial</option>
-            <option>Data and communications</option>
-            <option>Household units</option>
-          </select>
-        </label>
+        <div class="full">
+          <p class="widget-label" id="work-label">Type of work</p>
+          <div class="job-chips" role="radiogroup" aria-labelledby="work-label">
+            <label class="pill"><input type="radio" name="work" value="Domestic" checked> Domestic</label>
+            <label class="pill"><input type="radio" name="work" value="Commercial"> Commercial</label>
+            <label class="pill"><input type="radio" name="work" value="Industrial"> Industrial</label>
+            <label class="pill"><input type="radio" name="work" value="Data and communications"> Data and communications</label>
+            <label class="pill"><input type="radio" name="work" value="Household units"> Household units</label>
+          </div>
+        </div>
         <label class="full">A short description
           <textarea name="details"></textarea>
           <span class="field-error" hidden></span>
         </label>
-        <label>Preferred time to talk
-          <select name="when">
-            <option>Morning</option>
-            <option>Afternoon</option>
-            <option>Either</option>
-          </select>
-        </label>
+        <div class="full">
+          <p class="widget-label" id="when-label">Preferred time to talk</p>
+          <div class="time-pills" role="radiogroup" aria-labelledby="when-label">
+            <label class="pill"><input type="radio" name="when" value="Morning" checked> Morning</label>
+            <label class="pill"><input type="radio" name="when" value="Afternoon"> Afternoon</label>
+            <label class="pill"><input type="radio" name="when" value="Either"> Either</label>
+          </div>
+        </div>
         <div class="submit"><button class="btn btn-primary" type="submit">Request a quote</button></div>
       </form>
       <p class="thanks" hidden tabindex="-1">Thank you. We’ll call you back to talk through the job and confirm a time.</p>
