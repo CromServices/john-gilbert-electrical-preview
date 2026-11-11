@@ -63,19 +63,26 @@
 
 <main id="main">
 <section class="hero" id="top">
-  <div class="wrap">
-    <p class="kicker">Master Electrician · Licence 9693</p>
-    <h1>Electrical work for <em>Toowoomba</em> and the surrounding areas.</h1>
-    <p class="lead">John Gilbert Electrical covers all facets of electrical work, including domestic, commercial, industrial, and data and communications.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#quote">Request a quote</a>
-      <a class="btn btn-secondary" href="tel:0409067488">Call 0409 067 488</a>
+  <div class="wrap hero-split">
+    <div class="hero-copy">
+      <p class="kicker">Master Electrician · Licence 9693</p>
+      <h1>Electrical work for <em>Toowoomba</em> and the surrounding areas.</h1>
+      <p class="lead">John Gilbert Electrical covers all facets of electrical work, including domestic, commercial, industrial, and data and communications.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#quote">Request a quote</a>
+        <a class="btn btn-secondary" href="tel:0409067488">Call 0409 067 488</a>
+      </div>
+      <p class="proof">
+        <span>Licence 9693</span>
+        <span>Master Electrician</span>
+        <span>On call 24 hours, 7 days</span>
+      </p>
     </div>
-    <p class="proof">
-      <span>Licence 9693</span>
-      <span>Master Electrician</span>
-      <span>On call 24 hours, 7 days</span>
-    </p>
+    <figure class="hero-photo">
+      <a class="photo-link" href="assets/hero-john-gilbert.webp" data-caption="John Gilbert, Master Electrician.">
+        <img src="assets/hero-john-gilbert.webp" width="1400" height="934" alt="John Gilbert, Master Electrician">
+      </a>
+    </figure>
   </div>
 </section>
 
@@ -138,8 +145,10 @@
         </picture>
       </p>
     </div>
-    <figure class="photo-slot">
-      <strong>Your photo here — a recent job</strong>
+    <figure class="photo-frame">
+      <a class="photo-link" href="assets/work-vehicle.webp" data-caption="The John Gilbert Electrical work vehicle.">
+        <img src="assets/work-vehicle.webp" width="960" height="960" alt="John Gilbert Electrical work vehicle">
+      </a>
     </figure>
   </div>
 </section>
@@ -243,11 +252,11 @@
           <p class="widget-label" id="job-label">Type of work</p>
           <div data-job-error>
             <div class="job-chips" role="radiogroup" aria-labelledby="job-label">
-              <label class="job-chip"><input type="radio" name="job" value="Domestic"> Domestic</label>
-              <label class="job-chip"><input type="radio" name="job" value="Commercial"> Commercial</label>
-              <label class="job-chip"><input type="radio" name="job" value="Industrial"> Industrial</label>
-              <label class="job-chip"><input type="radio" name="job" value="Data and communications"> Data and communications</label>
-              <label class="job-chip"><input type="radio" name="job" value="Household units"> Household units</label>
+              <label class="pill"><input type="radio" name="job" value="Domestic"> Domestic</label>
+              <label class="pill"><input type="radio" name="job" value="Commercial"> Commercial</label>
+              <label class="pill"><input type="radio" name="job" value="Industrial"> Industrial</label>
+              <label class="pill"><input type="radio" name="job" value="Data and communications"> Data and communications</label>
+              <label class="pill"><input type="radio" name="job" value="Household units"> Household units</label>
             </div>
             <p class="field-error" hidden></p>
           </div>
@@ -281,7 +290,6 @@
         <footer>David · 4 years ago</footer>
       </blockquote>
     </div>
-    <p class="review-note">If we’ve already done a job for you, we’d be glad if you left a Google review. We’ll send a link after the work is finished.</p>
   </div>
 </section>
 
@@ -330,6 +338,16 @@
 <div class="sticky-call">
   <a class="btn btn-secondary" href="tel:0409067488">Call</a>
   <a class="btn btn-primary" href="#quote">Quote</a>
+</div>
+<div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photograph">
+  <button type="button" class="lightbox-close" aria-label="Close">×</button>
+  <button type="button" class="lightbox-prev" aria-label="Previous">‹</button>
+  <img class="lightbox-img" alt="">
+  <button type="button" class="lightbox-next" aria-label="Next">›</button>
+  <div class="lightbox-meta">
+    <p class="lightbox-caption"></p>
+    <p class="lightbox-count"></p>
+  </div>
 </div>
 <script src="site.js"></script>
 </body>
