@@ -318,6 +318,43 @@ html[data-theme="dark"] .icon-moon {
   align-items: flex-end;
   padding: 56px 0 64px;
 }
+.hero-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 40px 48px;
+  align-items: end;
+  width: min(1180px, calc(100% - 40px));
+}
+.hero-photo {
+  min-width: 0;
+  align-self: stretch;
+  min-height: 280px;
+  margin: 0;
+}
+.hero-photo .photo-link,
+.photo-frame .photo-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+}
+.hero-photo img,
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  max-height: min(70vh, 640px);
+  object-fit: cover;
+  display: block;
+}
+.photo-frame {
+  margin: 0;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--slot-bg);
+}
+.photo-frame .photo-link { min-height: 0; height: 100%; }
+.photo-frame img { max-height: none; }
 .hero::before {
   content: "";
   position: absolute;
@@ -481,7 +518,10 @@ form, .book-widget, .day-chips-wrap, .quote-grid, .book-grid, .about-grid {
   cursor: pointer;
   color: var(--ink);
 }
-.chip input, .pill input {
+.chip input,
+.pill input {
+  appearance: none;
+  -webkit-appearance: none;
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -489,6 +529,8 @@ form, .book-widget, .day-chips-wrap, .quote-grid, .book-grid, .about-grid {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  border: 0;
+  background: transparent;
 }
 .chip .dow, .chip .mon {
   font-size: 12px;
@@ -500,8 +542,10 @@ form, .book-widget, .day-chips-wrap, .quote-grid, .book-grid, .about-grid {
 .chip .dom { font-size: 22px; font-weight: 700; line-height: 1.1; }
 
 .time-pills, .job-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.pill, .job-chip {
+.pill {
   position: relative;
+  box-sizing: border-box;
+  height: 44px;
   min-height: 44px;
   padding: 0 16px;
   border-radius: 999px;
@@ -510,17 +554,27 @@ form, .book-widget, .day-chips-wrap, .quote-grid, .book-grid, .about-grid {
   font: inherit;
   font-weight: 700;
   font-size: 17px;
+  line-height: 1;
   cursor: pointer;
   color: var(--ink);
   display: inline-flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 0;
+  white-space: nowrap;
+  max-width: 100%;
 }
-.job-chip { font-size: 16px; }
+form .pill,
+form .chip {
+  flex-direction: row;
+  gap: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
 
 .chip:has(input:checked),
-.pill:has(input:checked),
-.job-chip:has(input:checked) {
+.pill:has(input:checked) {
   background: var(--selected-bg);
   color: var(--selected-fg);
   border-color: var(--selected-bg);
@@ -540,8 +594,7 @@ form, .book-widget, .day-chips-wrap, .quote-grid, .book-grid, .about-grid {
 .chip:has(input:disabled) input { cursor: not-allowed; }
 
 .chip:has(input:focus-visible),
-.pill:has(input:focus-visible),
-.job-chip:has(input:focus-visible) {
+.pill:has(input:focus-visible) {
   outline: 3px solid var(--focus);
   outline-offset: 3px;
 }
@@ -660,6 +713,57 @@ footer.site .logo img { height: 40px; margin-bottom: 0; }
 footer.site nav { display: flex; flex-wrap: wrap; gap: 8px 16px; }
 footer.site nav a { min-height: 44px; display: inline-flex; align-items: center; }
 
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(0, 0, 0, 0.92);
+  display: grid;
+  grid-template-rows: 44px 1fr auto;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  justify-items: center;
+  padding: 12px;
+  gap: 8px;
+}
+.lightbox[hidden] { display: none !important; }
+.lightbox-img {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.lightbox-close { grid-column: 3; grid-row: 1; justify-self: end; }
+.lightbox-prev { grid-column: 1; grid-row: 2; }
+.lightbox-next { grid-column: 3; grid-row: 2; }
+.lightbox-meta {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+body.lb-lock { overflow: hidden; }
+
 .sticky-call {
   display: none;
   position: fixed;
@@ -690,7 +794,9 @@ footer.site nav a { min-height: 44px; display: inline-flex; align-items: center;
   .lead { font-size: 20px; }
   .steps li { font-size: 17px; }
   form input, form select, form textarea { font-size: 17px; }
-    .about-grid, .quote-grid, .book-grid, .quotes, .contact-grid { grid-template-columns: minmax(0, 1fr); }
+    .about-grid, .quote-grid, .book-grid, .quotes, .contact-grid, .hero-split { grid-template-columns: minmax(0, 1fr); }
+  .hero-photo { order: -1; min-height: 220px; }
+  .hero-photo img { max-height: 42vh; }
   .about-grid > *, .quote-grid > *, .book-grid > *, form { min-width: 0; }
   header.site .wrap { min-height: 64px; flex-wrap: wrap; row-gap: 0; }
   .logo img { height: 44px; }
